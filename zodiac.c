@@ -68,7 +68,8 @@ int main(){
     int count = 0; 
 
     rewind(fp2);
-
+    
+    //places input in the file
     while(!feof(fp2)){
         fscanf(fp2, "%d-%d-%d",&d2.year,&d2.month,&d2.day);
         knowSign(&d2);
@@ -84,7 +85,8 @@ int main(){
     int ok = 0;
     i = 0;
     j = d.zodiac;
-
+    
+    //marks the position of the fortunes that have already been read
     while(count > 0 && i < arrSize || ok != 1){
         if(j == zodiacMarker[i]){
             zodiacMarker[i] = -1;
